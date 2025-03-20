@@ -1133,6 +1133,8 @@ footer{
 			height: 3.3125rem;
 			gap: 0.625rem;
 			margin-top: 1.4375rem;
+			display: flex;
+			align-items: center;
 	
 			svg{
 				width: 2.1875rem;
@@ -1142,9 +1144,11 @@ footer{
 			nav{
 				width: 36.375rem;
 				height: 1.625rem;
+				align-items: center;
 	
 				a{
 					font-size: 0.9375rem;
+					height: min-content;
 				}
 	
 			}
@@ -1417,6 +1421,7 @@ footer{
 	
 					h3{
 						font-size: 1.25rem;
+						font-weight: 400;
 					}
 				}
 	
