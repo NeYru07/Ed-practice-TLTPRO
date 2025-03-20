@@ -312,10 +312,50 @@ body {
   padding: 3.125rem 2.0625rem 0 0;
   gap: 2.375rem;
 }
-.block-2 .swiper {
+.block-2 .swiper-block {
   width: 79.75rem;
   height: 38.25rem;
-  background-color: #E8E4F7;
+  position: relative;
+}
+.block-2 .swiper-block .swiper {
+  width: 100%;
+  height: 100%;
+}
+.block-2 .swiper-block .swiper-slide {
+  text-align: center;
+  font-size: 1.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.block-2 .swiper-block .swiper-slide img {
+  display: block;
+  width: 65.6875rem;
+  height: 38.25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.block-2 .swiper-block .swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+.block-2 .swiper-block .swiper-button-next, .block-2 .swiper-block .swiper-button-prev {
+  color: #FF8904;
+}
+.block-2 .swiper-block .swiper-button-next:after,
+.block-2 .swiper-block .swiper-button-prev:after {
+  font-size: 1.5rem;
+  font-weight: 900;
 }
 
 .block-3 {
@@ -906,6 +946,18 @@ body {
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
+.block-7 .drop-down .cross-path.rotated-back {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
 
 .block-8 {
   width: 110rem;
@@ -979,7 +1031,7 @@ body {
 }
 .block-8 .left-block .registration .inputs {
   width: 33.8125rem;
-  height: 25.3438rem;
+  height: 33.8125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -995,6 +1047,9 @@ body {
   border-radius: 0.75rem;
   border: 0.0625rem solid #dfdfdf;
   padding: 0.875rem 1.0625rem;
+  font-size: 1rem;
+  font-family: "Inter";
+  font-weight: 400;
 }
 .block-8 .left-block .registration .inputs input:focus {
   outline: none;
@@ -1029,10 +1084,22 @@ body {
   font-weight: 400;
   color: #4d4d4d;
 }
-.block-8 .left-block .registration .inputs .big {
+.block-8 .left-block .registration .inputs textarea {
+  width: 25.8125rem;
   height: 9.75rem;
+  padding-top: 0.8125rem;
+  border: 0.0625rem solid #DFDFDF;
+  padding-left: 1.0625rem;
+  border-radius: 0.75rem;
+  resize: none;
+  font-size: 1rem;
+  font-family: "Inter";
+  font-weight: 400;
 }
-.block-8 .left-block .registration .inputs button {
+.block-8 .left-block .registration .inputs textarea:focus {
+  outline: none;
+}
+.block-8 .left-block .registration .inputs #submitButton {
   width: 9.0625rem;
   height: 3.0938rem;
   border: none;
@@ -1046,11 +1113,11 @@ body {
   -webkit-transition: 150ms ease-in-out;
   transition: 150ms ease-in-out;
 }
-.block-8 .left-block .registration .inputs button:hover {
+.block-8 .left-block .registration .inputs #submitButton:hover {
   background-color: #F0B100;
   cursor: pointer;
 }
-.block-8 .left-block .registration .inputs button:active {
+.block-8 .left-block .registration .inputs #submitButton:active {
   -webkit-transform: scale(0.98);
       -ms-transform: scale(0.98);
           transform: scale(0.98);
@@ -1200,6 +1267,17 @@ footer .bottom .icons .round {
 }
 footer .bottom .icons svg:hover .round {
   fill: #F0B100;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+.input-group input.error,
+.input-group textarea.error {
+  border: 2px solid #ff4444;
 }
 
 .btn-up {

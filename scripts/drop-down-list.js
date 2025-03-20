@@ -9,6 +9,7 @@ document.querySelectorAll('.faq-question').forEach((el) => {
 			  item.classList.remove('open');
 			  icon.querySelectorAll('.cross-path').forEach((path) => {
 					path.classList.remove('rotated');
+					path.classList.add('rotated-back')
 			  });
 		 } else {
 			  // Закрываем все открытые элементы
@@ -17,12 +18,14 @@ document.querySelectorAll('.faq-question').forEach((el) => {
 			  });
 			  document.querySelectorAll('.cross-path').forEach((path) => {
 					path.classList.remove('rotated');
+					path.classList.add('rotated-back')
 			  });
 
 			  // Открываем текущий элемент
 			  item.classList.add('open');
 			  icon.querySelectorAll('.cross-path').forEach((path) => {
 					path.classList.add('rotated');
+					path.classList.remove('rotated-back')
 			  });
 		 }
 	});

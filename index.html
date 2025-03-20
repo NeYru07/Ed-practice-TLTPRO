@@ -7,6 +7,7 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="./src/favicon/favicon.ico">
 	<link rel="icon" type="image/png" sizes="32x32" href="./src/favicon/favicon.ico">
 	<link rel="icon" type="image/png" sizes="16x16" href="./src/favicon/favicon.ico">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<title>TLT PRO</title>
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=ed116897-17cd-4571-bb8a-6cbd59cbd60f
 	&lang=ru_RU">
@@ -96,7 +97,18 @@
 	</div>
 
 	<div class="block-2">
-		<div class="swiper"></div>
+		<div class="swiper-block">
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+				  <div class="swiper-slide"><img src="./src/png/Picture.png"></div>
+				  <div class="swiper-slide"><img src="./src/png/Picture.png"></div>
+				  <div class="swiper-slide"><img src="./src/png/Picture.png"></div>
+				  <div class="swiper-slide"><img src="./src/png/Picture.png"></div>
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			 </div>
+		</div>
 		<a class="a-btn" href=""><button class="btn">ПОДРОБНЕЕ</button></a>
 	</div>
 
@@ -417,8 +429,8 @@
 					<span class="faq-icon"><svg width="59" height="59" viewBox="0 0 59 59" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<rect x="0.75" y="0.675781" width="58.5" height="58.5" rx="29.25" fill="white"/>
 										<rect x="0.75" y="0.675781" width="58.5" height="58.5" rx="29.25" stroke="#777777" stroke-width="0.5"/>
-										<path class="cross-path" d="M30 17.4258L30 42.4258" stroke="black" stroke-width="3" stroke-linecap="round"/>
-										<path class="cross-path" d="M17.5 29.9258L42.5 29.9258" stroke="black" stroke-width="3" stroke-linecap="round"/>
+										<path class="cross-path rotated" d="M30 17.4258L30 42.4258" stroke="black" stroke-width="3" stroke-linecap="round"/>
+										<path class="cross-path rotated" d="M17.5 29.9258L42.5 29.9258" stroke="black" stroke-width="3" stroke-linecap="round"/>
 										</svg></span>
 				  </div>
 				</div>
@@ -470,11 +482,27 @@
 						течении суток.</p>
 				</div>
 				<div class="inputs">
-					<input type="text" placeholder="Ваше имя">
-					<input type="tel" placeholder="+7 (___) ___-__-__">
-					<input type="email" placeholder="E-mail">
-					<input class="big" type="text" placeholder="О проекте">
-					<button>Написать</button>
+					<div class="input-group">
+						<input type="text" id="name" placeholder="Ваше имя">
+						<div id="nameError" class="error-message"></div>
+					</div>
+					
+					<div class="input-group">
+						<input class="mask-phone" type="tel" id="phone" placeholder="+7 (___) ___-__-__">
+						<div id="phoneError" class="error-message"></div>
+					</div>
+					
+					<div class="input-group">
+						<input type="email" id="email" placeholder="E-mail">
+						<div id="emailError" class="error-message"></div>
+					</div>
+					
+					<div class="input-group">
+						<textarea id="message" cols="30" rows="10" placeholder="О проекте"></textarea>
+						<div id="messageError" class="error-message"></div>
+					</div>
+					
+					<button id="submitButton">Написать</button>
 				</div>
 			</div>
 		</div>
@@ -538,28 +566,57 @@
 <script src="./scripts/map.js"></script>
 <script src="./scripts/animation-card.js"></script>
 <script src="./scripts/drop-down-list.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="./scripts/mask-number.js"></script>
+<script src="./scripts/validation.js" type="module"></script>
 <script>
+	// Маска номера
+$('.mask-phone').mask('+7 (999) 999-99-99');
+
+$.fn.setCursorPosition = function(pos) {
+  if ($(this).get(0).setSelectionRange) {
+    $(this).get(0).setSelectionRange(pos, pos);
+  } else if ($(this).get(0).createTextRange) {
+    var range = $(this).get(0).createTextRange();
+    range.collapse(true);
+    range.moveEnd('character', pos);
+    range.moveStart('character', pos);
+    range.select();
+  }
+};
+
+
+$('input[type="tel"]').click(function(){
+    $(this).setCursorPosition(4);
+  });
+
+	//Свайпер  
+		var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 15,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+	 
+	//  Кнопка вверх
 	const btnUp = {
 	  el: document.querySelector('.btn-up'),
 	  show() {
-		 // удалим у кнопки класс btn-up_hide
 		 this.el.classList.remove('btn-up_hide');
 	  },
 	  hide() {
-		 // добавим к кнопке класс btn-up_hide
 		 this.el.classList.add('btn-up_hide');
 	  },
 	  addEventListener() {
-		 // при прокрутке содержимого страницы
 		 window.addEventListener('scroll', () => {
-			// определяем величину прокрутки
 			const scrollY = window.scrollY || document.documentElement.scrollTop;
-			// если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
 			scrollY > 400 ? this.show() : this.hide();
 		 });
-		 // при нажатии на кнопку .btn-up
 		 document.querySelector('.btn-up').onclick = () => {
-			// переместим в начало страницы
 			window.scrollTo({
 			  top: 0,
 			  left: 0,
