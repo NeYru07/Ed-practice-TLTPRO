@@ -1596,12 +1596,13 @@ footer{
 		height: 10.875rem;
 		display: flex;
 		flex-direction: column;
-		gap: 2.3125rem;
+		gap: 1.5625rem;
 	
 		.top{
 			width: fit-content;
-			height: 4.625rem;
+			height: 2.75rem;
 			display: flex;
+			align-items: center;
 	
 			.up{
 				width: 59.5rem;
@@ -1620,11 +1621,13 @@ footer{
 					height: fit-content;
 					display: flex;
 					flex-direction: row;
+					justify-content: flex-end;
+					padding-right: 2.1875rem;
 	
 					ul{
 						display: flex;
 						flex-direction: row;
-						gap: 3.875rem;
+						gap: 2.75rem;
 						li{
 							a{
 								font-family: "Rubik";
@@ -1648,7 +1651,7 @@ footer{
 	
 		.bottom{
 			width: 53.25rem;
-			height: 3.9375rem;
+			height: 2.75rem;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -1656,13 +1659,13 @@ footer{
 	
 			.contacts{
 				width: 31.4375rem;
-				height: 3.9375rem;
+				height: 2.75rem;
 				display: flex;
 				gap: 0.875rem;
 	
 				.cont{
 					width: fit-content;
-					height: 3.9375rem;
+					height: 2.75rem;
 					display: flex;
 					flex-direction: column;
 					justify-content: space-between;
@@ -1688,7 +1691,7 @@ footer{
 				width: 5.625rem;
 				height: fit-content;
 				display: flex;
-				gap: 1.125rem;
+				gap: 0.5625rem;
 	
 				svg{
 					width: 1.625rem;

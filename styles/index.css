@@ -1972,16 +1972,19 @@ footer .bottom .icons svg:hover .round {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 2.3125rem;
+    gap: 1.5625rem;
   }
   footer .top {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    height: 4.625rem;
+    height: 2.75rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   footer .top .up {
     width: 59.5rem;
@@ -2015,6 +2018,10 @@ footer .bottom .icons svg:hover .round {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: 2.1875rem;
   }
   footer .top .up .links ul {
     display: -webkit-box;
@@ -2024,7 +2031,7 @@ footer .bottom .icons svg:hover .round {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 3.875rem;
+    gap: 2.75rem;
   }
   footer .top .up .links ul li a {
     font-family: "Rubik";
@@ -2041,7 +2048,7 @@ footer .bottom .icons svg:hover .round {
   }
   footer .bottom {
     width: 53.25rem;
-    height: 3.9375rem;
+    height: 2.75rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2055,7 +2062,7 @@ footer .bottom .icons svg:hover .round {
   }
   footer .bottom .contacts {
     width: 31.4375rem;
-    height: 3.9375rem;
+    height: 2.75rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2065,7 +2072,7 @@ footer .bottom .icons svg:hover .round {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    height: 3.9375rem;
+    height: 2.75rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2098,7 +2105,7 @@ footer .bottom .icons svg:hover .round {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 1.125rem;
+    gap: 0.5625rem;
   }
   footer .bottom .icons svg {
     width: 1.625rem;
