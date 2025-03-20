@@ -1365,6 +1365,8 @@ footer .bottom .icons svg:hover .round {
   width: 56rem;
   height: 47.5625rem;
   background-color: #eee;
+  border-top-right-radius: 1.5625rem;
+  border-bottom-right-radius: 1.5625rem;
 }
 
 [class*=copyrights-pane] {
@@ -1374,4 +1376,75 @@ footer .bottom .icons svg:hover .round {
 [class*=ground-pane] {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
+}
+
+[class*=map] {
+  border-top-right-radius: 1.5625rem;
+  border-bottom-right-radius: 1.5625rem;
+}
+
+@media (max-width: 100rem) {
+  html {
+    font-size: 1vw;
+  }
+}
+@media (max-width: 90rem) {
+  html {
+    font-size: 1.111vw;
+  }
+}
+@media (max-width: 85.375rem) {
+  html {
+    font-size: 1.171vw;
+  }
+}
+@media (max-width: 80rem) {
+  html {
+    font-size: 1.25vw;
+  }
+}
+@media (max-width: 64rem) {
+  html {
+    font-size: 1.563vw;
+  }
+}
+@media (max-width: 60rem) {
+  html {
+    font-size: 1.667vw;
+  }
+}
+@media (max-width: 48rem) {
+  html {
+    font-size: 2.083vw;
+  }
+}
+@media (max-width: 43.75rem) {
+  html {
+    font-size: 2.286vw;
+  }
+}
+@media (max-width: 30rem) {
+  html {
+    font-size: 3.333vw;
+  }
+}
+@media (max-width: 26.5625rem) {
+  html {
+    font-size: 3.765vw;
+  }
+}
+@media (max-width: 25rem) {
+  html {
+    font-size: 4vw;
+  }
+}
+@media (max-width: 23.4375rem) {
+  html {
+    font-size: 4.267vw;
+  }
+}
+@media (max-width: 20rem) {
+  html {
+    font-size: 5vw;
+  }
 }
