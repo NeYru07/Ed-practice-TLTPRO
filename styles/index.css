@@ -1208,7 +1208,7 @@ footer .top .up svg {
   height: 2.125rem;
 }
 footer .top .up .links {
-  width: 33.1875rem;
+  width: 45.0625rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -1237,6 +1237,9 @@ footer .top .up .links ul li a {
   line-height: 1.5rem;
   color: #000;
   text-decoration: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 footer .line {
   width: 110rem;
@@ -1613,7 +1616,7 @@ footer .bottom .icons svg:hover .round {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 685px;
+    height: 42.8125rem;
     padding: 0.9375rem 1.75rem;
     gap: 1.25rem;
   }
@@ -2020,7 +2023,7 @@ footer .bottom .icons svg:hover .round {
     height: 1.5625rem;
   }
   footer .top .up .links {
-    width: 33.1875rem;
+    width: 43.8125rem;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;

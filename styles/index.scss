@@ -929,7 +929,7 @@ footer{
 			}
 
 			.links{
-				width: 33.1875rem;
+				width: 45.0625rem;
 				height: fit-content;
 				display: flex;
 				flex-direction: row;
@@ -946,6 +946,7 @@ footer{
 							line-height: 1.5rem;
 							color: #000;
 							text-decoration: none;
+							width: max-content;
 						}
 					}
 				}
@@ -1299,7 +1300,7 @@ footer{
 	
 	.block-4{
 		@include block;
-		height: 685px;
+		height: 42.8125rem;
 		padding: 0.9375rem 1.75rem;
 		gap: 1.25rem;
 	
@@ -1622,7 +1623,7 @@ footer{
 				}
 	
 				.links{
-					width: 33.1875rem;
+					width: 43.8125rem;
 					height: fit-content;
 					display: flex;
 					flex-direction: row;
